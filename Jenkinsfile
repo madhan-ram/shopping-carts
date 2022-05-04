@@ -4,7 +4,7 @@ pipeline {
     stage('compile') {
       steps {
         echo 'this is the compile job'
-        sh ‘mvn compile’ 
+        sh 'mvn compile' 
       }
     }
 
@@ -24,13 +24,13 @@ pipeline {
 
     stage('archive') {
       steps {
-        archiveArtifacts ‘**/target/*.jar’
+        archiveArtifacts '**/target/*.jar'
       }
     }
 
   }
   tools {
-    maven ‘maven’
+    maven 'maven'
   }
   post {
     always {
